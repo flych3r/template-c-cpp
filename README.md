@@ -1,1 +1,1 @@
-# cookiecutter-c
+# Template C/C++
