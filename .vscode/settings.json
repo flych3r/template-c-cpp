@@ -1,4 +1,9 @@
 {
     "cSpell.words": [
-    ]
+    ],
+    "code-runner.executorMap": {
+        "c": "make && ./$fileNameWithoutExt.out"
+    },
+    "clang-tidy.checks": [
+     ]
 }

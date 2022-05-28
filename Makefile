@@ -4,7 +4,7 @@
 
 # Compiler settings - Can be customized.
 CC = gcc
-CXXFLAGS = -std=c99 -Wall -Wall -Werror -g
+CXXFLAGS = -g -std=c99 -Wall -Werror -lm
 LDFLAGS =
 
 # Makefile settings - Can be customized.

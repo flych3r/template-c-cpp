@@ -6,10 +6,14 @@
             "command": "/usr/bin/gcc-9",
             "args": [
                 "-fdiagnostics-color=always",
+                "-std=c99",
+                "-Wall",
+                "-Werror",
                 "-g",
+                "-lm",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}.out"
             ],
             "options": {
                 "cwd": "${fileDirname}"
