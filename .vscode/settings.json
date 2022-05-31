@@ -3,12 +3,6 @@
     "code-runner.executorMap": {
         "c": "make && ./$fileNameWithoutExt.out"
     },
-    "clang-tidy.checks": [
-        "clang-analyzer-*",
-        "readability-*",
-        "bugprone-*",
-        "misc-*",
-    ],
     "clang-tidy.compilerArgs": [
         "-std=c99",
         "-Wall",
@@ -19,7 +13,6 @@
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
-    "clang-format.language.c.style": "LLVM",
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
     "files.associations": {

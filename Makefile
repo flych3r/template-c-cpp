@@ -46,6 +46,11 @@ $(APPNAME): $(OBJ)
 $(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
 	$(CC) $(CXXFLAGS) -o $@ -c $<
 
+######################## Run linter on C files #########################
+.PHONY: lint
+lint:
+	clang-tidy $(wildcard $(SRCDIR)/*$(EXT)) $(wildcard $(SRCDIR)/**/*$(EXT)) --
+
 ################### Cleaning rules for Unix-based OS ###################
 # Cleans complete project
 .PHONY: clean
