@@ -1,9 +1,28 @@
 {
-    "cSpell.words": [
-    ],
+    "cSpell.words": [],
     "code-runner.executorMap": {
         "c": "make && ./$fileNameWithoutExt.out"
     },
     "clang-tidy.checks": [
-     ]
+        "clang-analyzer-*",
+        "readability-*",
+        "bugprone-*",
+        "misc-*",
+    ],
+    "clang-tidy.compilerArgs": [
+        "-std=c99",
+        "-Wall",
+        "-Werror",
+        "-g",
+        "-lm",
+    ],
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "clang-format.language.c.style": "LLVM",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "files.associations": {
+        "stdio.h": "c"
+    },
 }
