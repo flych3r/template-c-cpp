@@ -3,8 +3,7 @@
 		pkgs.clang_12
 		pkgs.ccls
 		pkgs.gdb
-		pkgs.gnumake,
-		pkgs.clang-tidy,
-		pkgs.clang-format
+		pkgs.gnumake
+		pkgs.clang-tools
 	];
 }
