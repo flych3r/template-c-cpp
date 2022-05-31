@@ -29,7 +29,7 @@ WDELOBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)\\%.o)
 ####################### Targets beginning here #########################
 ########################################################################
 
-all: $(APPNAME)
+all: lint $(APPNAME)
 
 # Builds the app
 $(APPNAME): $(OBJ)
@@ -45,6 +45,11 @@ $(APPNAME): $(OBJ)
 # Building rule for .o files and its .c/.cpp in combination with all .h
 $(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
 	$(CC) $(CXXFLAGS) -o $@ -c $<
+
+######################## Run linter on C files #########################
+.PHONY: lint
+lint:
+	clang-tidy $(wildcard $(SRCDIR)/*$(EXT)) $(wildcard $(SRCDIR)/**/*$(EXT)) --
 
 ################### Cleaning rules for Unix-based OS ###################
 # Cleans complete project

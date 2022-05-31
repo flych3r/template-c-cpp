@@ -1,0 +1,7 @@
+---
+Checks:          'clang-analyzer-*,clang-diagnostic-*,readability-*,bugprone-*,misc-*'
+WarningsAsErrors: true
+HeaderFilterRegex: ''
+AnalyzeTemporaryDtors: false
+FormatStyle:     LLVM
+...
