@@ -3,6 +3,7 @@
     "code-runner.executorMap": {
         "c": "make && ./$fileNameWithoutExt.out"
     },
+    "code-runner.runInTerminal": true,
     "clang-tidy.compilerArgs": [
         "-std=c99",
         "-Wall",
