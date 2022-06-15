@@ -1,7 +1,7 @@
 {
     "cSpell.words": [],
     "code-runner.executorMap": {
-        "c": "make && ./$fileNameWithoutExt.out"
+        "c": "make && ./bin/$fileNameWithoutExt.out"
     },
     "code-runner.runInTerminal": true,
     "clang-tidy.compilerArgs": [
