@@ -8,15 +8,17 @@ CXXFLAGS = -g -std=c99 -Wall -Werror -lm
 LDFLAGS =
 
 # Makefile settings - Can be customized.
-APPNAME = main.out
+APPNAME = bin/main.out
 EXT = .c
 SRCDIR = src
 OBJDIR = obj
+DEPDIR = bin
+INC = -I src/include
 
 ############## Do not change anything from here downwards! #############
 SRC = $(wildcard $(SRCDIR)/*$(EXT))
 OBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)
-DEP = $(OBJ:$(OBJDIR)/%.o=%.d)
+DEP = $(OBJ:$(OBJDIR)/%.o=$(DEPDIR)/%.d)
 # UNIX-based OS variables & settings
 RM = rm
 DELOBJ = $(OBJ)
@@ -33,7 +35,7 @@ all: $(APPNAME)
 
 # Builds the app
 $(APPNAME): $(OBJ)
-	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+	$(CC) $(CXXFLAGS) $(INC) -o $@ $^ $(LDFLAGS)
 
 # Creates the dependecy rules
 %.d: $(SRCDIR)/%$(EXT)
